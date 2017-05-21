@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.val {
+  color: red;
+  font-style: italic;
+}
+</style>
+
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["first_name"].value;
+    var y = document.forms["myForm"]["last_name"].value;
+    var z = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        document.getElementById("first_name_val").innerHTML = "first name is required";
+        alert("Name must be filled out");
+        return false;
+    }
+    if (y == "") {
+        document.getElementById("last_name_val").innerHTML = "last name is required";
+        return false;
+    }
+    if (z == "") {
+        document.getElementById("email_val").innerHTML = "email is  required";
+        return false;
+    }
+    if (x != "" && y != "" && z != "") {
+      document.getElementById("success_message").innerHTML = "Success! " + x + " " + y + " " + z;
+      return false;
+    }
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="#" onsubmit="return validateForm()" method="post">
+
+  <div>
+    First Name:
+    <input type="text" name="first_name">
+    <label id="first_name_val" class="val">
+  </div>
+
+  <div>
+    Last Name:
+    <input type="text" name="last_name">
+    <label id="last_name_val" class="val">
+  </div>
+
+  <div>
+    Email:
+    <input type="text" name="email">
+    <label id="email_val" class="val">
+  </div>
+
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+
+</form>
+
+<div id="success_message">  </div>
+
+</body>
+</html>

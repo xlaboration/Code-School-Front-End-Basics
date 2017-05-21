@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/theme/style.css" />
+  <script src="/theme/include.js"></script>
+</head>
+<body>
+
+  <div w3-include-html="/theme/header.html">
+  </div>
+
+  <form name="myForm" action="#" onsubmit="return validateForm()" method="post">
+
+    <div>
+      First Name:
+      <input type="text" name="first_name">
+      <label id="first_name_val" class="val">
+    </div>
+
+    <div>
+      Last Name:
+      <input type="text" name="last_name">
+      <label id="last_name_val" class="val">
+    </div>
+
+    <div>
+      Email:
+      <input type="text" name="email">
+      <label id="email_val" class="val">
+    </div>
+
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+
+  </form>
+
+  <div id="success_message">
+  </div>
+
+  <script>
+    BBDO.includeHTML();
+  </script>
+
+</body>
+</html>

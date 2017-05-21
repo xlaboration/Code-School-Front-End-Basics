@@ -1,0 +1,45 @@
+
+<style>
+body {margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+ul.topnav li a.active {background-color: #4CAF50;}
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+}
+</style>
+
+
+<ul class="topnav">
+  <li><a href="/index.html">Home</a></li>
+  <li><a href="/animate.html">Animation</a></li>
+  <li><a href="/form.html">Contact Form</a></li>
+  <li style="float:right"><a href="#">Welcome!</a></li>
+</ul>
+
+<div style="padding:0 16px;">
+  <h2>Welcome to Code School!</h2>
+  <p>Resize the browser to 600px or less to see a responsive menu.</p>
+
+</div>
